@@ -19,8 +19,7 @@ function gif(){
 }
 
 function animacion(){
-    figure.style.backgroundImage= "url('img/animacion.jpg')";
-    figure.style.backgroundSize= "cover";
+    figure.classList.add('animado');
 
 }
 
