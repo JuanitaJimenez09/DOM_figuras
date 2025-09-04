@@ -86,6 +86,41 @@ function color(){
   }
 }
 
+function elegirFigura(){
+    const figure = document.getElementById("figure");
+    const opcion = prompt("Escribe la figura que quieres: círculo, estrella o cuadrado");
+
+    switch (opcion) {
+        case "circulo":
+            figure.style.borderRadius = "50%";
+            figure.style.background = "pink";
+            figure.style.clipPath = "none";
+            break;
+
+        case "estrella":
+            figure.style.borderRadius = "0";
+            figure.style.background = "purple";
+            figure.style.clipPath =
+            "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)";
+            break;
+
+        case "cuadrado":
+            figure.style.borderRadius = "0";
+            figure.style.background = "lightblue";
+            figure.style.clipPath = "none";
+            break;
+
+        default:
+            alert("Opción no válida. Escribe: circulo, estrella o cuadrado.");
+    }
+}
+
+
+
+
+
+
+
 
 
 
@@ -111,6 +146,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById("btnAddParagraph").addEventListener("click", agregarParrafo);
     document.getElementById('btnRemoveParagraph').addEventListener('click', eliminar);
     document.getElementById('btnHexColor').addEventListener('click',color );
+    document.getElementById('btnChooseFigure').addEventListener('click',elegirFigura);
 
 })
 
