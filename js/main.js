@@ -140,6 +140,16 @@ function imagePrev() {
     imagen.setAttribute('src', arregloImagenes[index]);
 }
 
+function toggleImage() {
+    if (imagen.style.display === "none") {
+        imagen.style.display = "block";
+    } else {
+        imagen.style.display = "none";
+    }
+}
+
+
+
 
 
 
@@ -164,6 +174,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnChooseFigure').addEventListener('click',elegirFigura);
     document.getElementById('btnChangeImageNext').addEventListener('click', imageNext);
     document.getElementById('btnChangeImagePrev').addEventListener('click', imagePrev);
+    document.getElementById('btnToggleImage').addEventListener('click',toggleImage);
 
 })
 

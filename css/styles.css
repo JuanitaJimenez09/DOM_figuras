@@ -125,3 +125,8 @@ img{
 #figure.right{
   transform: translateX(150px);
 }
+#mainImage {
+  display: block;
+  margin: 0 auto; 
+}
+
