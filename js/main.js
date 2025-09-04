@@ -7,6 +7,8 @@ let arregloImagenes = [
 ]
 let index= 0
 
+const link = document.getElementById('mainLink');
+
 function circulo(){
     figure.style.borderRadius = '50%';
     figure.style.background = "pink";
@@ -149,13 +151,22 @@ function toggleImage() {
 }
 
 function cambiarAlt(){
-    const text = prompt('Ingresa un texto: ')
-    imagen.setAttribute('alt', text)
+    const text = prompt('Ingresa un texto: ');
+    imagen.setAttribute('alt', text);
 }
 
-function cambiarHref() {
-    let nHref = prompt("Ingrese una nueva URL"); 
-    link.setAttribute("href", nHref);            
+function cambiarHref(){
+    const newHref = prompt('Ingresa una nueva URL: ');
+    link.setAttribute('href', newHref);
+}
+
+function abrirPestana() {
+    link.setAttribute("target", "_blank");
+    link.setAttribute("href", "https://github.com/JuanitaJimenez09");
+}
+
+function desLink() {
+    link.removeAttribute("href"); 
 }
 
 
@@ -187,6 +198,8 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnToggleImage').addEventListener('click',toggleImage);
     document.getElementById('btnChangeAlt').addEventListener('click', cambiarAlt);
     document.getElementById('btnChangeLink').addEventListener('click',cambiarHref);
+    document.getElementById('btnOpenLink').addEventListener('click',abrirPestana);
+     document.getElementById('btnDisableLink').addEventListener('click',desLink);
 })
 
 
