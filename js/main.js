@@ -148,6 +148,11 @@ function toggleImage() {
     }
 }
 
+function cambiarAlt(){
+    const text = prompt('Ingresa un texto: ')
+    imagen.setAttribute('alt', text)
+}
+
 
 
 
@@ -175,6 +180,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnChangeImageNext').addEventListener('click', imageNext);
     document.getElementById('btnChangeImagePrev').addEventListener('click', imagePrev);
     document.getElementById('btnToggleImage').addEventListener('click',toggleImage);
+    document.getElementById('btnChangeAlt').addEventListener('click', cambiarAlt);
 
 })
 
