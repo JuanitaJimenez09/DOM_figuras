@@ -40,6 +40,14 @@ function derecha(){
     figure.style.background = "#75d1d9ff";
 }
 
+function titulo(){
+    const mainTitle = document.getElementById("mainTitle");
+    const nuevoTitulo = prompt("Escribe el nuevo título:");
+
+    if (nuevoTitulo) {
+        mainTitle.textContent = nuevoTitulo;
+    }
+}
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -50,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnMoveDown').addEventListener('click', abajo);
     document.getElementById('btnMoveLeft').addEventListener('click', izquierda);
     document.getElementById('btnMoveRight').addEventListener('click', derecha);
+    document.getElementById('btnChangeTitle').addEventListener('click', titulo);
 
 })
 
