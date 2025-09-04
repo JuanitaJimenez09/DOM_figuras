@@ -131,6 +131,16 @@ function imageNext(){
     imagen.setAttribute('src', arregloImagenes[index])
 }
 
+function imagePrev() {
+    index--;
+    if (index < 0) {
+        index = arregloImagenes.length - 1;
+    }
+
+    imagen.setAttribute('src', arregloImagenes[index]);
+}
+
+
 
 
 
@@ -153,6 +163,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnHexColor').addEventListener('click',color );
     document.getElementById('btnChooseFigure').addEventListener('click',elegirFigura);
     document.getElementById('btnChangeImageNext').addEventListener('click', imageNext);
+    document.getElementById('btnChangeImagePrev').addEventListener('click', imagePrev);
 
 })
 
