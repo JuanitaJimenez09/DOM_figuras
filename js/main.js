@@ -31,8 +31,10 @@ function abajo(){
     figure.style.background = "#b8daafff"
 }
 
-
-
+function izquierda(){
+    figure.classList.toggle("left");
+    figure.style.background = "#c0b2daff";
+}
 
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -41,7 +43,8 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnGif').addEventListener('click', gif );
     document.getElementById('btnAnim').addEventListener('click', animacion);
     document.getElementById('btnMoveUp').addEventListener('click', arriba);
-    document.getElementById('btnMoveDown').addEventListener('click', arriba);
+    document.getElementById('btnMoveDown').addEventListener('click', abajo);
+    document.getElementById('btnMoveLeft').addEventListener('click', izquierda);
 
 })
 
