@@ -1,4 +1,11 @@
 const figure = document.getElementById('figure');
+const imagen = document.getElementById('mainImage');
+let arregloImagenes = [
+    'img/imagen.jpg',
+    'img/imagen2.jpg',
+    'img/imagen3.jpg',
+]
+let index= 0
 
 function circulo(){
     figure.style.borderRadius = '50%';
@@ -115,16 +122,14 @@ function elegirFigura(){
     }
 }
 
+function imageNext(){
+    index++
+    if (index >= arregloImagenes.length) {
+        index = 0
+    }
 
-
-
-
-
-
-
-
-
-
+    imagen.setAttribute('src', arregloImagenes[index])
+}
 
 
 
@@ -147,6 +152,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnRemoveParagraph').addEventListener('click', eliminar);
     document.getElementById('btnHexColor').addEventListener('click',color );
     document.getElementById('btnChooseFigure').addEventListener('click',elegirFigura);
+    document.getElementById('btnChangeImageNext').addEventListener('click', imageNext);
 
 })
 
