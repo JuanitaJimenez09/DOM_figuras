@@ -35,6 +35,10 @@ function izquierda(){
     figure.classList.toggle("left");
     figure.style.background = "#c0b2daff";
 }
+function derecha(){
+    figure.classList.toggle("right");
+    figure.style.background = "#75d1d9ff";
+}
 
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -45,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnMoveUp').addEventListener('click', arriba);
     document.getElementById('btnMoveDown').addEventListener('click', abajo);
     document.getElementById('btnMoveLeft').addEventListener('click', izquierda);
+    document.getElementById('btnMoveRight').addEventListener('click', derecha);
 
 })
 
