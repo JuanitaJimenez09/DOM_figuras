@@ -113,6 +113,9 @@ img{
     background: #e956e4;
   }
 }
-#figure.top{
+#figure.arriba{
   transform: translateY(-150px);
+}
+#figure.abajo{
+  transform: translateY(150px);
 }

@@ -26,6 +26,10 @@ function arriba(){
     figure.classList.toggle("top");
     figure.style.background = "#eb865eff"
 }
+function abajo(){
+    figure.classList.toggle("down");
+    figure.style.background = "#b8daafff"
+}
 
 
 
@@ -37,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnGif').addEventListener('click', gif );
     document.getElementById('btnAnim').addEventListener('click', animacion);
     document.getElementById('btnMoveUp').addEventListener('click', arriba);
+    document.getElementById('btnMoveDown').addEventListener('click', arriba);
 
 })
 
