@@ -67,6 +67,15 @@ function agregarParrafo(){
     }
 }
 
+function eliminar(){
+  const elimina = document.getElementById("extraParagraphs");
+    if (elimina.lastChild) {
+    elimina.removeChild(elimina.lastChild);
+  } else {
+    alert("No hay párrafos para eliminar.");
+  }
+}
+
 
 
 
@@ -87,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnChangeTitle').addEventListener('click', titulo);
     document.getElementById('btnChangeParagraph').addEventListener('click', parrafo);
     document.getElementById("btnAddParagraph").addEventListener("click", agregarParrafo);
+    document.getElementById('btnRemoveParagraph').addEventListener('click', eliminar);
 
 })
 
