@@ -49,6 +49,32 @@ function titulo(){
     }
 }
 
+function parrafo(){
+    const parafo = document.getElementById("mainParagraph");
+    const nuevoParafo = prompt("Escribe el nuevo párrafo:");
+
+    if (nuevoParafo) {
+        parafo.textContent = nuevoParafo;
+    }
+}
+
+function agregarParrafo(){
+    const adicionar = document.getElementById('extraParagraphs')
+    const agregar= prompt("Escribe el texto para el nuevo párrafo")
+
+    if (agregar) {
+        adicionar.textContent = agregar;
+    }
+}
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
     document.getElementById('btnStar').addEventListener('click', estrella );
@@ -59,6 +85,8 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnMoveLeft').addEventListener('click', izquierda);
     document.getElementById('btnMoveRight').addEventListener('click', derecha);
     document.getElementById('btnChangeTitle').addEventListener('click', titulo);
+    document.getElementById('btnChangeParagraph').addEventListener('click', parrafo);
+    document.getElementById("btnAddParagraph").addEventListener("click", agregarParrafo);
 
 })
 
