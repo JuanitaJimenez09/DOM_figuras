@@ -22,6 +22,13 @@ function animacion(){
     figure.classList.add('animado');
 
 }
+function arriba(){
+    figure.classList.toggle("top");
+    figure.style.background = "#eb865eff"
+}
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -29,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnStar').addEventListener('click', estrella );
     document.getElementById('btnGif').addEventListener('click', gif );
     document.getElementById('btnAnim').addEventListener('click', animacion);
+    document.getElementById('btnMoveUp').addEventListener('click', arriba);
 
 })
 
